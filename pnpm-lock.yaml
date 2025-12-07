@@ -207,15 +207,6 @@ catalogs:
     '@testing-library/react':
       specifier: ^15.0.7
       version: 15.0.7
-    '@tiptap-pro/extension-details':
-      specifier: ^2.10.11
-      version: 2.10.11
-    '@tiptap-pro/extension-details-content':
-      specifier: ^2.10.11
-      version: 2.10.11
-    '@tiptap-pro/extension-details-summary':
-      specifier: ^2.10.11
-      version: 2.10.11
     '@tiptap/core':
       specifier: ^2.6.4
       version: 2.6.4
@@ -240,6 +231,15 @@ catalogs:
     '@tiptap/extension-collaboration-cursor':
       specifier: ^2.6.4
       version: 2.6.4
+    '@tiptap/extension-details':
+      specifier: ^2.22.0
+      version: 2.27.1
+    '@tiptap/extension-details-content':
+      specifier: ^2.22.0
+      version: 2.26.2
+    '@tiptap/extension-details-summary':
+      specifier: ^2.22.0
+      version: 2.26.2
     '@tiptap/extension-document':
       specifier: ^2.6.4
       version: 2.6.4
@@ -1700,15 +1700,6 @@ importers:
       '@campsite/regex':
         specifier: workspace:*
         version: link:../regex
-      '@tiptap-pro/extension-details':
-        specifier: 'catalog:'
-        version: 2.10.11(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/pm@2.6.4)
-      '@tiptap-pro/extension-details-content':
-        specifier: 'catalog:'
-        version: 2.10.11(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/pm@2.6.4)
-      '@tiptap-pro/extension-details-summary':
-        specifier: 'catalog:'
-        version: 2.10.11(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))
       '@tiptap/core':
         specifier: 'catalog:'
         version: 2.6.4(@tiptap/pm@2.6.4)
@@ -1727,6 +1718,15 @@ importers:
       '@tiptap/extension-code-block':
         specifier: 'catalog:'
         version: 2.6.4(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/pm@2.6.4)
+      '@tiptap/extension-details':
+        specifier: 'catalog:'
+        version: 2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/extension-text-style@2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4)))
+      '@tiptap/extension-details-content':
+        specifier: 'catalog:'
+        version: 2.26.2(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/extension-text-style@2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4)))
+      '@tiptap/extension-details-summary':
+        specifier: 'catalog:'
+        version: 2.26.2(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/extension-text-style@2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4)))
       '@tiptap/extension-document':
         specifier: 'catalog:'
         version: 2.6.4(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))
@@ -5983,23 +5983,6 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
-  '@tiptap-pro/extension-details-content@2.10.11':
-    resolution: {integrity: sha512-tXNdI/N0E++WI0KbmRwB262r0M/eqYSu/WLu2ZCyxB2lchCWdpn4mkntaGQDSJ7wo6MPE7jIBof8c9HWokxSKw==}
-    peerDependencies:
-      '@tiptap/core': ^2.0.0
-      '@tiptap/pm': ^2.0.0
-
-  '@tiptap-pro/extension-details-summary@2.10.11':
-    resolution: {integrity: sha512-2vrpWGfq87qo50MPy1BsXZEU4c0gQWcnrnmSomrYe/83gvxlqo4TmdFxH0J54xsMoY8CBwK1PrfYODr1egulUQ==}
-    peerDependencies:
-      '@tiptap/core': ^2.0.0
-
-  '@tiptap-pro/extension-details@2.10.11':
-    resolution: {integrity: sha512-Uh0EEPDzyDqK1w4Z0H8KkqKIWsBaGSVRsVeczf0stAtGenVxLb/xJBoKEhwLfBvbfdq70RJpcOx7oFWeXezvhA==}
-    peerDependencies:
-      '@tiptap/core': ^2.0.0
-      '@tiptap/pm': ^2.0.0
-
   '@tiptap/core@2.6.4':
     resolution: {integrity: sha512-lv+JyBI+5C6C7BMLYg2bloB00HvAZkcvgO3CzmFia28Vtt1P9yhS44elvBemhUf7IP7Hu12FUzDWY+2GQqiqkw==}
     peerDependencies:
@@ -6049,6 +6032,24 @@ packages:
       '@tiptap/core': ^2.6.4
       '@tiptap/pm': ^2.6.4
       y-prosemirror: ^1.2.11
+
+  '@tiptap/extension-details-content@2.26.2':
+    resolution: {integrity: sha512-2Ia2KqwYucuv7dcTpA/PhytUuDhotzi8uZPXBHlGJLHVI9rAmJsSvID9cX/YWRTvCvAxyNqDp0sBH+Qx8QcloQ==}
+    peerDependencies:
+      '@tiptap/core': ^2.7.0
+      '@tiptap/extension-text-style': ^2.7.0
+
+  '@tiptap/extension-details-summary@2.26.2':
+    resolution: {integrity: sha512-rbRq6f56HKvzIuSpPHt513Ubglq728pz8Jx7WBRVqjpYF5/sTpYu9hZpbrIfLfjb2UakXI/LVU8vS50VwTwCnw==}
+    peerDependencies:
+      '@tiptap/core': ^2.7.0
+      '@tiptap/extension-text-style': ^2.7.0
+
+  '@tiptap/extension-details@2.27.1':
+    resolution: {integrity: sha512-FDrf4wkHG4gQku+/MEYcwgSuj7ya3UkZOKZVJgYx2gOMVA3QrocsfAq4bkJ7uItW+ccbmBdQKovSTAa5G4Vfrg==}
+    peerDependencies:
+      '@tiptap/core': ^2.7.0
+      '@tiptap/extension-text-style': ^2.7.0
 
   '@tiptap/extension-document@2.6.4':
     resolution: {integrity: sha512-fEQzou6J/w7GWiMqxxiwX2TEB6hgjBsImkHCxU05a4IOnIkzC8C9pV+NWa8u1LGvbERmVPBQqWYJG6phDhtYkg==}
@@ -6147,6 +6148,11 @@ packages:
     resolution: {integrity: sha512-ennPydfDoO9mKlitoBaybX7okNxzWwQ/2es7EtCC+jS14akBsEuWM8TA/a6P6EJAXNqx6IN+ADZJVYIdUqdabw==}
     peerDependencies:
       '@tiptap/core': ^2.6.4
+
+  '@tiptap/extension-text-style@2.27.1':
+    resolution: {integrity: sha512-NagQ9qLk0Ril83gfrk+C65SvTqPjL3WVnLF2arsEVnCrxcx3uDOvdJW67f/K5HEwEHsoqJ4Zq9Irco/koXrOXA==}
+    peerDependencies:
+      '@tiptap/core': ^2.7.0
 
   '@tiptap/extension-text@2.6.4':
     resolution: {integrity: sha512-QfspuCTTpmFrSLbDs2z/0W7GLaoNanwj4OCKPSPz5XcraZJgFLsWAqZxZE4aLgZbJH2hcGWMe5ZHmvLf5dJogw==}
@@ -18521,7 +18527,7 @@ snapshots:
     dependencies:
       '@sanity/client': 6.22.0(debug@4.3.6)
       '@sanity/icons': 3.4.0(react@18.2.0)
-      '@sanity/preview-url-secret': 1.6.21(@sanity/client@6.22.0(debug@4.3.6))
+      '@sanity/preview-url-secret': 1.6.21(@sanity/client@6.22.0)
       '@sanity/ui': 2.8.9(react-dom@18.2.0(react@18.2.0))(react-is@18.2.0)(react@18.2.0)(styled-components@6.1.13(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
       '@sanity/uuid': 3.0.2
       '@types/lodash.isequal': 4.5.8
@@ -18553,7 +18559,7 @@ snapshots:
     optionalDependencies:
       react: 18.2.0
 
-  '@sanity/preview-url-secret@1.6.21(@sanity/client@6.22.0(debug@4.3.6))':
+  '@sanity/preview-url-secret@1.6.21(@sanity/client@6.22.0)':
     dependencies:
       '@sanity/client': 6.22.0(debug@4.3.6)
       '@sanity/uuid': 3.0.2
@@ -18667,7 +18673,7 @@ snapshots:
 
   '@sanity/visual-editing@2.1.10(@sanity/client@6.22.0)(next@14.2.5(@babel/core@7.24.6)(@opentelemetry/api@1.9.0)(@playwright/test@1.43.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(svelte@4.2.19)':
     dependencies:
-      '@sanity/preview-url-secret': 1.6.21(@sanity/client@6.22.0(debug@4.3.6))
+      '@sanity/preview-url-secret': 1.6.21(@sanity/client@6.22.0)
       '@vercel/stega': 0.1.2
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -19846,20 +19852,6 @@ snapshots:
     dependencies:
       '@testing-library/dom': 9.3.4
 
-  '@tiptap-pro/extension-details-content@2.10.11(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/pm@2.6.4)':
-    dependencies:
-      '@tiptap/core': 2.6.4(@tiptap/pm@2.6.4)
-      '@tiptap/pm': 2.6.4
-
-  '@tiptap-pro/extension-details-summary@2.10.11(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))':
-    dependencies:
-      '@tiptap/core': 2.6.4(@tiptap/pm@2.6.4)
-
-  '@tiptap-pro/extension-details@2.10.11(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/pm@2.6.4)':
-    dependencies:
-      '@tiptap/core': 2.6.4(@tiptap/pm@2.6.4)
-      '@tiptap/pm': 2.6.4
-
   '@tiptap/core@2.6.4(@tiptap/pm@2.6.4)':
     dependencies:
       '@tiptap/pm': 2.6.4
@@ -19901,6 +19893,21 @@ snapshots:
       '@tiptap/core': 2.6.4(@tiptap/pm@2.6.4)
       '@tiptap/pm': 2.6.4
       y-prosemirror: 1.2.12(prosemirror-model@1.22.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.9)(y-protocols@1.0.6(yjs@13.6.8))(yjs@13.6.8)
+
+  '@tiptap/extension-details-content@2.26.2(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/extension-text-style@2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4)))':
+    dependencies:
+      '@tiptap/core': 2.6.4(@tiptap/pm@2.6.4)
+      '@tiptap/extension-text-style': 2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))
+
+  '@tiptap/extension-details-summary@2.26.2(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/extension-text-style@2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4)))':
+    dependencies:
+      '@tiptap/core': 2.6.4(@tiptap/pm@2.6.4)
+      '@tiptap/extension-text-style': 2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))
+
+  '@tiptap/extension-details@2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))(@tiptap/extension-text-style@2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4)))':
+    dependencies:
+      '@tiptap/core': 2.6.4(@tiptap/pm@2.6.4)
+      '@tiptap/extension-text-style': 2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))
 
   '@tiptap/extension-document@2.6.4(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))':
     dependencies:
@@ -19981,6 +19988,10 @@ snapshots:
       '@tiptap/pm': 2.6.4
 
   '@tiptap/extension-task-list@2.6.4(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))':
+    dependencies:
+      '@tiptap/core': 2.6.4(@tiptap/pm@2.6.4)
+
+  '@tiptap/extension-text-style@2.27.1(@tiptap/core@2.6.4(@tiptap/pm@2.6.4))':
     dependencies:
       '@tiptap/core': 2.6.4(@tiptap/pm@2.6.4)
 
