@@ -118,5 +118,5 @@ Rails.application.configure do
   # required to access the app via Fly private network
   config.hosts << "campsite-api.internal"
 
-  config.hosts << ENV.fetch("CAMPSITE_API_HOST")
+  config.hosts << ENV.fetch("CAMPSITE_AUTH_HOST")
 end

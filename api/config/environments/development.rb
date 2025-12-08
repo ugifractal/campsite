@@ -88,5 +88,5 @@ Rails.application.configure do
   config.hosts << /.+\.campsite\.design/
   config.hosts << /.+\.campsite\.co/
   config.hosts << /.+\.campsite\.com/
-  config.hosts << ENV.fetch("CAMPSITE_API_HOST")
+  config.hosts << ENV.fetch("CAMPSITE_AUTH_HOST")
 end
