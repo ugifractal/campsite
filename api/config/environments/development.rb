@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "active_support/core_ext/integer/time"
-require "debug/open_nonstop" unless Sidekiq.server?
+# require "debug/open_nonstop" unless Sidekiq.server?
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -82,9 +82,11 @@ Rails.application.configure do
 
   config.hosts << "admin.campsite.test"
   config.hosts << "auth.campsite.test"
+  config.hosts << "app.campsite.test"
   config.hosts << "api.campsite.test"
   config.hosts << "campsite.test"
   config.hosts << /.+\.campsite\.design/
   config.hosts << /.+\.campsite\.co/
   config.hosts << /.+\.campsite\.com/
+  config.hosts << ENV.fetch("CAMPSITE_API_HOST")
 end
