@@ -20,15 +20,9 @@ export const SYNC_URL = IS_PRODUCTION ? SYNC_URL_PROD : process.env.NEXT_PUBLIC_
 export const DESKTOP_APP_PROTOCOL = IS_PRODUCTION ? 'campsite://' : 'campsite-dev://'
 export const LAST_CLIENT_JS_BUILD_ID_LS_KEY = 'latest-js-time'
 
-export const RAILS_API_URL = IS_PRODUCTION
-  ? 'https://api.campsite.com'
-  : process.env.NEXT_PUBLIC_API_URL || 'http://api.campsite.test:3001'
+export const RAILS_API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://api.campsite.test:3001'
 
-const RAILS_AUTH_URL_PROD_COM = 'https://auth.campsite.com'
-
-export const RAILS_AUTH_URL = IS_PRODUCTION
-  ? RAILS_AUTH_URL_PROD_COM
-  : process.env.NEXT_PUBLIC_AUTH_URL || 'http://auth.campsite.test:3001'
+export const RAILS_AUTH_URL = process.env.NEXT_PUBLIC_AUTH_URL || 'http://auth.campsite.test:3001'
 
 /*
   Not using an env variable because we use this variable in the browser, which
