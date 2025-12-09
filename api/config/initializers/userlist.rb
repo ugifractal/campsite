@@ -11,3 +11,9 @@
 #   config.push_strategy = :sidekiq # Rails.env.production? ? :sidekiq : :null
 #   config.push_strategy_options = { queue: :background }
 # end
+
+# Disable userlist
+
+Userlist.configure do |config|
+  config.push_strategy = :null
+end
