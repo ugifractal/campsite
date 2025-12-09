@@ -119,4 +119,5 @@ Rails.application.configure do
   config.hosts << "campsite-api.internal"
 
   config.hosts << ENV.fetch("CAMPSITE_AUTH_HOST")
+  config.hosts << ENV.fetch("CAMPSITE_API_HOST")
 end
