@@ -57,7 +57,8 @@ const cspResourcesByDirective = {
     'https://campsite.imgix.net',
     process.env.NODE_ENV !== 'production' && 'https://campsite-dev.imgix.net',
     'https://react-tweet.vercel.app', // for react-tweet embeds
-    'https://media.tenor.com' // used for Tenor gifs
+    'https://media.tenor.com', // used for Tenor gifs
+    'https://*.yap.tech'
   ],
   'font-src': ["'self'"],
   'img-src': [
