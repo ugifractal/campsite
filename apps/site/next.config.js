@@ -91,7 +91,7 @@ const config = {
       },
       {
         source: '/start',
-        destination: 'https://auth.campsite.com/sign-up',
+        destination: `${process.env.AUTH_BASE_URL}/sign-up`,
         permanent: false
       },
       {
